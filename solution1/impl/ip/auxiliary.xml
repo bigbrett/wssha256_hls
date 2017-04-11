@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="sha256" xd:componentRef="sha256" xd:initiationInterval="x" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="data[]" xd:originalName="data" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x100" xd:arraySize="256" xd:dataWidth="8"/>
+  <xd:arg xd:name="base_offset" xd:originalName="base_offset" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x200" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="bytes" xd:originalName="bytes" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x208" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="digest[]" xd:originalName="digest" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x220" xd:arraySize="32" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="7134" xd:FF="4424" xd:BRAM="12" xd:DSP="0"/>
+</xd:acceleratorMap>

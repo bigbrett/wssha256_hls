@@ -1,0 +1,13 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "sha256_sha256ctx_bkb.vhd"
+vhdl xil_defaultlib "sha256.vhd"
+vhdl xil_defaultlib "sha256_final.vhd"
+vhdl xil_defaultlib "sha256.autotb.vhd"
+vhdl xil_defaultlib "sha256_transform_m.vhd"
+vhdl xil_defaultlib "sha256_transform_k.vhd"
+vhdl xil_defaultlib "sha256_seg_buf.vhd"
+vhdl xil_defaultlib "sha256_transform.vhd"
+vhdl xil_defaultlib "sha256_AXILiteS_s_axi.vhd"
+vhdl xil_defaultlib "AESL_axi_slave_AXILiteS.vhd"
+vhdl xil_defaultlib "sha256_update.vhd"
+

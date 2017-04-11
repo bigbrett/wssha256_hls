@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Apr 11 14:24:37 2017
+# Process ID: 3265
+# Current directory: /home/brett/Thesis/Vivado_WS/sha256/solution1/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/sha256/xsim_script.tcl}
+# Log file: /home/brett/Thesis/Vivado_WS/sha256/solution1/sim/vhdl/xsim.log
+# Journal file: /home/brett/Thesis/Vivado_WS/sha256/solution1/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/sha256/xsim_script.tcl
+# xsim {sha256} -autoloadwcfg -tclbatch {sha256.tcl}
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source sha256.tcl
+## run all
+Note: simulation done!
+Time: 114748 ns  Iteration: 1  Process: /apatb_sha256_top/generate_sim_done_proc  File: /home/brett/Thesis/Vivado_WS/sha256/solution1/sim/vhdl/sha256.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 114748 ns  Iteration: 1  Process: /apatb_sha256_top/generate_sim_done_proc  File: /home/brett/Thesis/Vivado_WS/sha256/solution1/sim/vhdl/sha256.autotb.vhd
+$finish called at time : 114748 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Apr 11 14:24:44 2017...

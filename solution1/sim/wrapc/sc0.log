@@ -1,0 +1,46 @@
+   Build using "/opt/Xilinx/Vivado_HLS/2016.4/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_sha256.cpp
+   Compiling (apcc) sha256_tb.c_pre.c.tb.c
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'brett' on host 'wintermute.thayer.dartmouth.edu' (Linux_x86_64 version 4.4.0-72-generic) on Tue Apr 11 14:24:32 EDT 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/brett/Thesis/Vivado_WS/sha256/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+/home/brett/Thesis/Vivado_WS/sha256/src/sha256_tb.c:59:15: warning: passing 'unsigned char [32]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+  if( strncmp(digest, sw_hash, 32) ) {
+              ^~~~~~
+/usr/include/string.h:143:33: note: passing argument to parameter '__s1' here
+extern int strncmp (const char *__s1, const char *__s2, size_t __n)
+                                ^
+/home/brett/Thesis/Vivado_WS/sha256/src/sha256_tb.c:59:23: warning: passing 'unsigned char [32]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+  if( strncmp(digest, sw_hash, 32) ) {
+                      ^~~~~~~
+/usr/include/string.h:143:51: note: passing argument to parameter '__s2' here
+extern int strncmp (const char *__s1, const char *__s2, size_t __n)
+                                                  ^
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_brett/30081491935072258298
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sha256.c_pre.c.tb.c
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'brett' on host 'wintermute.thayer.dartmouth.edu' (Linux_x86_64 version 4.4.0-72-generic) on Tue Apr 11 14:24:32 EDT 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/brett/Thesis/Vivado_WS/sha256/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_brett/30601491935072961554
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sha256_impl.c_pre.c.tb.c
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'brett' on host 'wintermute.thayer.dartmouth.edu' (Linux_x86_64 version 4.4.0-72-generic) on Tue Apr 11 14:24:33 EDT 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/brett/Thesis/Vivado_WS/sha256/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_brett/31121491935073654529
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

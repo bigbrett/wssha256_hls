@@ -1,0 +1,499 @@
+
+
+================================================================
+== Vivado HLS Report for 'sha256_update'
+================================================================
+* Date:           Tue Apr 11 14:24:22 2017
+
+* Version:        2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)
+* Project:        sha256
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.65|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-------+-----+-------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    | min |  max  | min |  max  |   Type  |
+    +-----+-------+-----+-------+---------+
+    |    1|  28097|    1|  28097|   none  |
+    +-----+-------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-------+----------+-----------+-----------+--------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name| min |  max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+-----+-------+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |    0|  28096|  3 ~ 439 |          -|          -| 0 ~ 64 |    no    |
+        +----------+-----+-------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond)
+3 --> 
+	4  / (tmp_3)
+	5  / (!tmp_3)
+4 --> 
+	5  / true
+5 --> 
+	2  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: ctx_datalen (16)  [1/1] 0.00ns
+:0  %ctx_datalen = alloca i32
+
+ST_1: ctx_state_7 (17)  [1/1] 0.00ns
+:1  %ctx_state_7 = alloca i32
+
+ST_1: ctx_state_6 (18)  [1/1] 0.00ns
+:2  %ctx_state_6 = alloca i32
+
+ST_1: ctx_state_5 (19)  [1/1] 0.00ns
+:3  %ctx_state_5 = alloca i32
+
+ST_1: ctx_state_4 (20)  [1/1] 0.00ns
+:4  %ctx_state_4 = alloca i32
+
+ST_1: ctx_state_3 (21)  [1/1] 0.00ns
+:5  %ctx_state_3 = alloca i32
+
+ST_1: ctx_state_2 (22)  [1/1] 0.00ns
+:6  %ctx_state_2 = alloca i32
+
+ST_1: ctx_state_1 (23)  [1/1] 0.00ns
+:7  %ctx_state_1 = alloca i32
+
+ST_1: ctx_state (24)  [1/1] 0.00ns
+:8  %ctx_state = alloca i32
+
+ST_1: ctx_bitlen_1 (25)  [1/1] 0.00ns
+:9  %ctx_bitlen_1 = alloca i32
+
+ST_1: ctx_bitlen (26)  [1/1] 0.00ns
+:10  %ctx_bitlen = alloca i32
+
+ST_1: len_read (27)  [1/1] 0.00ns
+:11  %len_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %len)
+
+ST_1: p_read (28)  [1/1] 0.00ns
+:12  %p_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read10)
+
+ST_1: p_read_1 (29)  [1/1] 0.00ns
+:13  %p_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read9)
+
+ST_1: p_read_2 (30)  [1/1] 0.00ns
+:14  %p_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read8)
+
+ST_1: p_read_3 (31)  [1/1] 0.00ns
+:15  %p_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read7)
+
+ST_1: p_read_4 (32)  [1/1] 0.00ns
+:16  %p_read_4 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read6)
+
+ST_1: p_read_5 (33)  [1/1] 0.00ns
+:17  %p_read_5 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read5)
+
+ST_1: p_read45 (34)  [1/1] 0.00ns
+:18  %p_read45 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read4)
+
+ST_1: p_read34 (35)  [1/1] 0.00ns
+:19  %p_read34 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read3)
+
+ST_1: p_read23 (36)  [1/1] 0.00ns
+:20  %p_read23 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read2)
+
+ST_1: p_read12 (37)  [1/1] 0.00ns
+:21  %p_read12 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read1)
+
+ST_1: ctx_datalen_read_1 (38)  [1/1] 0.00ns
+:22  %ctx_datalen_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %ctx_datalen_read)
+
+ST_1: tmp_7 (39)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:90
+:23  %tmp_7 = trunc i32 %len_read to i8
+
+ST_1: StgValue_30 (40)  [1/1] 1.57ns
+:24  store i32 %p_read12, i32* %ctx_bitlen
+
+ST_1: StgValue_31 (41)  [1/1] 1.57ns
+:25  store i32 %p_read23, i32* %ctx_bitlen_1
+
+ST_1: StgValue_32 (42)  [1/1] 1.57ns
+:26  store i32 %p_read34, i32* %ctx_state
+
+ST_1: StgValue_33 (43)  [1/1] 1.57ns
+:27  store i32 %p_read45, i32* %ctx_state_1
+
+ST_1: StgValue_34 (44)  [1/1] 1.57ns
+:28  store i32 %p_read_5, i32* %ctx_state_2
+
+ST_1: StgValue_35 (45)  [1/1] 1.57ns
+:29  store i32 %p_read_4, i32* %ctx_state_3
+
+ST_1: StgValue_36 (46)  [1/1] 1.57ns
+:30  store i32 %p_read_3, i32* %ctx_state_4
+
+ST_1: StgValue_37 (47)  [1/1] 1.57ns
+:31  store i32 %p_read_2, i32* %ctx_state_5
+
+ST_1: StgValue_38 (48)  [1/1] 1.57ns
+:32  store i32 %p_read_1, i32* %ctx_state_6
+
+ST_1: StgValue_39 (49)  [1/1] 1.57ns
+:33  store i32 %p_read, i32* %ctx_state_7
+
+ST_1: StgValue_40 (50)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:86
+:34  store i32 %ctx_datalen_read_1, i32* %ctx_datalen
+
+ST_1: StgValue_41 (51)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:90
+:35  br label %._crit_edge
+
+
+ <State 2>: 2.39ns
+ST_2: i (53)  [1/1] 0.00ns
+._crit_edge:0  %i = phi i7 [ 0, %0 ], [ %i_1, %._crit_edge.backedge ]
+
+ST_2: i_cast (54)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:90
+._crit_edge:1  %i_cast = zext i7 %i to i8
+
+ST_2: exitcond (55)  [1/1] 2.00ns  loc: sha256/src/sha256_impl.c:90
+._crit_edge:2  %exitcond = icmp eq i8 %i_cast, %tmp_7
+
+ST_2: empty (56)  [1/1] 0.00ns
+._crit_edge:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 64, i64 0)
+
+ST_2: i_1 (57)  [1/1] 1.72ns  loc: sha256/src/sha256_impl.c:90
+._crit_edge:4  %i_1 = add i7 %i, 1
+
+ST_2: StgValue_47 (58)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:90
+._crit_edge:5  br i1 %exitcond, label %2, label %1
+
+ST_2: tmp (61)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:91
+:1  %tmp = zext i7 %i to i64
+
+ST_2: data_addr (62)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:91
+:2  %data_addr = getelementptr [64 x i8]* %data, i64 0, i64 %tmp
+
+ST_2: data_load (63)  [2/2] 2.39ns  loc: sha256/src/sha256_impl.c:91
+:3  %data_load = load i8* %data_addr, align 1
+
+ST_2: ctx_datalen_load_1 (112)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:0  %ctx_datalen_load_1 = load i32* %ctx_datalen
+
+ST_2: ctx_state_7_load (113)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:1  %ctx_state_7_load = load i32* %ctx_state_7
+
+ST_2: ctx_state_6_load (114)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:2  %ctx_state_6_load = load i32* %ctx_state_6
+
+ST_2: ctx_state_5_load (115)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:3  %ctx_state_5_load = load i32* %ctx_state_5
+
+ST_2: ctx_state_4_load (116)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:4  %ctx_state_4_load = load i32* %ctx_state_4
+
+ST_2: ctx_state_3_load (117)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:5  %ctx_state_3_load = load i32* %ctx_state_3
+
+ST_2: ctx_state_2_load (118)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:6  %ctx_state_2_load = load i32* %ctx_state_2
+
+ST_2: ctx_state_1_load (119)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:7  %ctx_state_1_load = load i32* %ctx_state_1
+
+ST_2: ctx_state_load (120)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:8  %ctx_state_load = load i32* %ctx_state
+
+ST_2: ctx_bitlen_1_load_1 (121)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:9  %ctx_bitlen_1_load_1 = load i32* %ctx_bitlen_1
+
+ST_2: ctx_bitlen_load_1 (122)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:10  %ctx_bitlen_load_1 = load i32* %ctx_bitlen
+
+ST_2: mrv_s (123)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:11  %mrv_s = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } undef, i32 %ctx_datalen_load_1, 0
+
+ST_2: mrv_1 (124)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:12  %mrv_1 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_s, i32 %ctx_bitlen_load_1, 1
+
+ST_2: mrv_2 (125)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:13  %mrv_2 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_1, i32 %ctx_bitlen_1_load_1, 2
+
+ST_2: mrv_3 (126)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:14  %mrv_3 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_2, i32 %ctx_state_load, 3
+
+ST_2: mrv_4 (127)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:15  %mrv_4 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_3, i32 %ctx_state_1_load, 4
+
+ST_2: mrv_5 (128)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:16  %mrv_5 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_4, i32 %ctx_state_2_load, 5
+
+ST_2: mrv_6 (129)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:17  %mrv_6 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_5, i32 %ctx_state_3_load, 6
+
+ST_2: mrv_7 (130)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:18  %mrv_7 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_6, i32 %ctx_state_4_load, 7
+
+ST_2: mrv_8 (131)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:19  %mrv_8 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_7, i32 %ctx_state_5_load, 8
+
+ST_2: mrv_9 (132)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:20  %mrv_9 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_8, i32 %ctx_state_6_load, 9
+
+ST_2: mrv_10 (133)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:21  %mrv_10 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_9, i32 %ctx_state_7_load, 10
+
+ST_2: StgValue_73 (134)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:99
+:22  ret { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_10
+
+
+ <State 3>: 4.96ns
+ST_3: ctx_datalen_load (60)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:92
+:0  %ctx_datalen_load = load i32* %ctx_datalen
+
+ST_3: data_load (63)  [1/2] 2.39ns  loc: sha256/src/sha256_impl.c:91
+:3  %data_load = load i8* %data_addr, align 1
+
+ST_3: tmp_1 (64)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:91
+:4  %tmp_1 = zext i32 %ctx_datalen_load to i64
+
+ST_3: ctx_data_addr (65)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:91
+:5  %ctx_data_addr = getelementptr [64 x i8]* %ctx_data, i64 0, i64 %tmp_1
+
+ST_3: StgValue_78 (66)  [1/1] 2.39ns  loc: sha256/src/sha256_impl.c:91
+:6  store i8 %data_load, i8* %ctx_data_addr, align 1
+
+ST_3: tmp_2 (67)  [1/1] 2.44ns  loc: sha256/src/sha256_impl.c:92
+:7  %tmp_2 = add i32 %ctx_datalen_load, 1
+
+ST_3: tmp_3 (68)  [1/1] 2.52ns  loc: sha256/src/sha256_impl.c:93
+:8  %tmp_3 = icmp eq i32 %tmp_2, 64
+
+ST_3: StgValue_81 (69)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:93
+:9  br i1 %tmp_3, label %._crit_edge1, label %._crit_edge.backedge.pre
+
+ST_3: StgValue_82 (71)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:92
+._crit_edge.backedge.pre:0  store i32 %tmp_2, i32* %ctx_datalen
+
+ST_3: StgValue_83 (72)  [1/1] 0.00ns
+._crit_edge.backedge.pre:1  br label %._crit_edge.backedge
+
+
+ <State 4>: 1.57ns
+ST_4: ctx_state_7_load_1 (74)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:0  %ctx_state_7_load_1 = load i32* %ctx_state_7
+
+ST_4: ctx_state_6_load_1 (75)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:1  %ctx_state_6_load_1 = load i32* %ctx_state_6
+
+ST_4: ctx_state_5_load_1 (76)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:2  %ctx_state_5_load_1 = load i32* %ctx_state_5
+
+ST_4: ctx_state_4_load_1 (77)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:3  %ctx_state_4_load_1 = load i32* %ctx_state_4
+
+ST_4: ctx_state_3_load_1 (78)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:4  %ctx_state_3_load_1 = load i32* %ctx_state_3
+
+ST_4: ctx_state_2_load_1 (79)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:5  %ctx_state_2_load_1 = load i32* %ctx_state_2
+
+ST_4: ctx_state_1_load_1 (80)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:6  %ctx_state_1_load_1 = load i32* %ctx_state_1
+
+ST_4: ctx_state_load_1 (81)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:7  %ctx_state_load_1 = load i32* %ctx_state
+
+ST_4: call_ret (84)  [2/2] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:10  %call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_load_1, i32 %ctx_state_1_load_1, i32 %ctx_state_2_load_1, i32 %ctx_state_3_load_1, i32 %ctx_state_4_load_1, i32 %ctx_state_5_load_1, i32 %ctx_state_6_load_1, i32 %ctx_state_7_load_1, [64 x i8]* %ctx_data)
+
+ST_4: StgValue_93 (107)  [1/1] 1.57ns
+._crit_edge1:33  store i32 0, i32* %ctx_datalen
+
+
+ <State 5>: 5.46ns
+ST_5: ctx_bitlen_1_load (82)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:95
+._crit_edge1:8  %ctx_bitlen_1_load = load i32* %ctx_bitlen_1
+
+ST_5: ctx_bitlen_load (83)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:95
+._crit_edge1:9  %ctx_bitlen_load = load i32* %ctx_bitlen
+
+ST_5: call_ret (84)  [1/2] 2.44ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:10  %call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_load_1, i32 %ctx_state_1_load_1, i32 %ctx_state_2_load_1, i32 %ctx_state_3_load_1, i32 %ctx_state_4_load_1, i32 %ctx_state_5_load_1, i32 %ctx_state_6_load_1, i32 %ctx_state_7_load_1, [64 x i8]* %ctx_data)
+
+ST_5: ctx_state_0_ret (85)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:11  %ctx_state_0_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 0
+
+ST_5: ctx_state_1_ret (86)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:12  %ctx_state_1_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 1
+
+ST_5: ctx_state_2_ret (87)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:13  %ctx_state_2_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 2
+
+ST_5: ctx_state_3_ret (88)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:14  %ctx_state_3_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 3
+
+ST_5: ctx_state_4_ret (89)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:15  %ctx_state_4_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 4
+
+ST_5: ctx_state_5_ret (90)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:16  %ctx_state_5_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 5
+
+ST_5: ctx_state_6_ret (91)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:17  %ctx_state_6_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 6
+
+ST_5: ctx_state_7_ret (92)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:18  %ctx_state_7_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 7
+
+ST_5: tmp_4 (93)  [1/1] 2.52ns  loc: sha256/src/sha256_impl.c:95
+._crit_edge1:19  %tmp_4 = icmp ugt i32 %ctx_bitlen_load, -513
+
+ST_5: tmp_5 (94)  [1/1] 2.44ns  loc: sha256/src/sha256_impl.c:95
+._crit_edge1:20  %tmp_5 = add i32 %ctx_bitlen_1_load, 1
+
+ST_5: tmp_5_ctx_bitlen_1 (95)  [1/1] 1.37ns  loc: sha256/src/sha256_impl.c:95
+._crit_edge1:21  %tmp_5_ctx_bitlen_1 = select i1 %tmp_4, i32 %tmp_5, i32 %ctx_bitlen_1_load
+
+ST_5: tmp_6 (96)  [1/1] 2.44ns  loc: sha256/src/sha256_impl.c:95
+._crit_edge1:22  %tmp_6 = add i32 %ctx_bitlen_load, 512
+
+ST_5: StgValue_109 (97)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:95
+._crit_edge1:23  store i32 %tmp_6, i32* %ctx_bitlen
+
+ST_5: StgValue_110 (98)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:95
+._crit_edge1:24  store i32 %tmp_5_ctx_bitlen_1, i32* %ctx_bitlen_1
+
+ST_5: StgValue_111 (99)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:25  store i32 %ctx_state_0_ret, i32* %ctx_state
+
+ST_5: StgValue_112 (100)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:26  store i32 %ctx_state_1_ret, i32* %ctx_state_1
+
+ST_5: StgValue_113 (101)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:27  store i32 %ctx_state_2_ret, i32* %ctx_state_2
+
+ST_5: StgValue_114 (102)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:28  store i32 %ctx_state_3_ret, i32* %ctx_state_3
+
+ST_5: StgValue_115 (103)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:29  store i32 %ctx_state_4_ret, i32* %ctx_state_4
+
+ST_5: StgValue_116 (104)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:30  store i32 %ctx_state_5_ret, i32* %ctx_state_5
+
+ST_5: StgValue_117 (105)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:31  store i32 %ctx_state_6_ret, i32* %ctx_state_6
+
+ST_5: StgValue_118 (106)  [1/1] 1.57ns  loc: sha256/src/sha256_impl.c:94
+._crit_edge1:32  store i32 %ctx_state_7_ret, i32* %ctx_state_7
+
+ST_5: StgValue_119 (108)  [1/1] 0.00ns  loc: sha256/src/sha256_impl.c:97
+._crit_edge1:34  br label %._crit_edge.backedge
+
+ST_5: StgValue_120 (110)  [1/1] 0.00ns
+._crit_edge.backedge:0  br label %._crit_edge
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 1.57ns
+The critical path consists of the following:
+	'alloca' operation ('ctx.datalen') [16]  (0 ns)
+	'store' operation (sha256/src/sha256_impl.c:86) of variable 'ctx.datalen' on local variable 'ctx.datalen' [50]  (1.57 ns)
+
+ <State 2>: 2.39ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', sha256/src/sha256_impl.c:90) [53]  (0 ns)
+	'getelementptr' operation ('data_addr', sha256/src/sha256_impl.c:91) [62]  (0 ns)
+	'load' operation ('data_load', sha256/src/sha256_impl.c:91) on array 'data' [63]  (2.39 ns)
+
+ <State 3>: 4.96ns
+The critical path consists of the following:
+	'load' operation ('ctx_datalen_load', sha256/src/sha256_impl.c:92) on local variable 'ctx.datalen' [60]  (0 ns)
+	'add' operation ('tmp_2', sha256/src/sha256_impl.c:92) [67]  (2.44 ns)
+	'icmp' operation ('tmp_3', sha256/src/sha256_impl.c:93) [68]  (2.52 ns)
+
+ <State 4>: 1.57ns
+The critical path consists of the following:
+	'store' operation of constant 0 on local variable 'ctx.datalen' [107]  (1.57 ns)
+
+ <State 5>: 5.46ns
+The critical path consists of the following:
+	'load' operation ('ctx_bitlen_load', sha256/src/sha256_impl.c:95) on local variable 'ctx_bitlen' [83]  (0 ns)
+	'icmp' operation ('tmp_4', sha256/src/sha256_impl.c:95) [93]  (2.52 ns)
+	'select' operation ('tmp_5_ctx_bitlen_1', sha256/src/sha256_impl.c:95) [95]  (1.37 ns)
+	'store' operation (sha256/src/sha256_impl.c:95) of variable 'tmp_5_ctx_bitlen_1', sha256/src/sha256_impl.c:95 on local variable 'ctx_bitlen_1' [98]  (1.57 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
