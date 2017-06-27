@@ -5,10 +5,10 @@
 ############################################################
 open_project sha256
 set_top sha256
-add_files sha256/src/sha256_impl.h
-add_files sha256/src/sha256_impl.c
-add_files sha256/src/sha256.h
 add_files sha256/src/sha256.c
+add_files sha256/src/sha256.h
+add_files sha256/src/sha256_impl.c
+add_files sha256/src/sha256_impl.h
 add_files -tb sha256/src/sha256_tb.c -cflags "-std=c99"
 open_solution "solution1"
 set_part {xc7z020clg484-1} -tool vivado
