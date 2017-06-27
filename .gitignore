@@ -1,6 +1,4 @@
-.apc
 .vivado*
 *.swp
 .project
 .cproject
-vivado_hls.app
