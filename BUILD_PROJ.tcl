@@ -8,7 +8,7 @@ add_files wssha256_hls/src/sha256.c
 add_files wssha256_hls/src/sha256.h
 add_files wssha256_hls/src/sha256_impl.c
 add_files wssha256_hls/src/sha256_impl.h
-add_files -tb wssha256_hls/src/sha256_tb.cpp
+add_files -tb wssha256_hls/src/sha256_tb.c
 
 cd wssha256_hls
 
