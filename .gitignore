@@ -1,5 +1,16 @@
-.apc/*
-.vivado*
-*.swp
-.project
-.cproject
+# Blacklist files/folders in same directory as the .gitignore file
+*
+!*/
+
+# Whitelist some files
+!.gitignore
+
+# "/" is NOT optional when followed by a *
+!src/*.cpp
+!src/*.hpp
+!/solution*/directives.tcl
+!/solution*/script.tcl
+!BUILD_PROJ.tcl
+
+# don't ignore markdown files, since they are probably READMEs
+!/*.md
